@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../../public/assets/fonts/HelveticaNeue-MediumExt.woff2') format('woff2'),
+      url('../../public/assets/fonts/HelveticaNeue-MediumExt.woff') format('woff'),
+      url('../../public/assets/fonts/HelveticaNeue-MediumExt.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chronicle Display Semi';
+  src: url('../../public/assets/fonts/ChronicleDisplay-Semi.woff2') format('woff2'),
+      url('../../public/assets/fonts/ChronicleDisplay-Semi.woff') format('woff'),
+      url('../../public/assets/fonts/ChronicleDisplay-Semi.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chronicle Display';
+  src: url('../../public/assets/fonts/ChronicleDisplay-Roman.woff2') format('woff2'),
+      url('../../public/assets/fonts/ChronicleDisplay-Roman.woff') format('woff'),
+      url('../../public/assets/fonts/ChronicleDisplay-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chronicle Display';
+  src: url('../../public/assets/fonts/ChronicleDisplay-Black.woff2') format('woff2'),
+      url('../../public/assets/fonts/ChronicleDisplay-Black.woff') format('woff'),
+      url('../../public/assets/fonts/ChronicleDisplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+

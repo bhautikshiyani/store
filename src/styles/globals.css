@@ -50,3 +50,13 @@
   font-style: normal;
   font-display: swap;
 }
+.slick-arrow.slick-prev.slick-disabled svg,
+.slick-arrow.slick-next.slick-disabled svg{
+  opacity: 0.25;
+}
+.slick-slide {
+  margin: 0 5px;
+}
+.slick-list {
+  margin: 0px -5px 0px -5px;
+}

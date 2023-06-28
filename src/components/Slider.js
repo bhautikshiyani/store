@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Slide } from "react-slideshow-image";
 
@@ -17,12 +18,15 @@ const Slider = () => {
   return (
     <div className="mb-7">
 
-    <Slide slidesToScroll={1} slidesToShow={1} arrows={false} indicators={true}>
+    <Slide autoplay={true} infinite={true} canSwipe={false} slidesToScroll={1} slidesToShow={1} arrows={false} indicators={true}>
       {images.map((items, index) => {
         return (
-          <div key={index} className="each-slide-effect">
+            <Link key={index} href={"#"}>
+
+          <div  className="each-slide-effect">
             <Image width={1980} height={400} src={items.img} />
           </div>
+            </Link>
         );
       })}
 

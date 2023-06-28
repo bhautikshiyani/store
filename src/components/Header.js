@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { AiFillHeart } from "react-icons/ai";
@@ -17,9 +17,10 @@ import {
   PlayCircleIcon,
   RectangleGroupIcon,
 } from "@heroicons/react/20/solid";
-import TopHeader from ".";
+
 import Link from "next/link";
 import Image from "next/image";
+import TopHeader from "./TopHeader/TopHeader";
 
 const products = [
   {
@@ -58,11 +59,27 @@ function classNames(...classes) {
 }
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
-    <div className="border-b-2 border-black ">
-      <TopHeader />
-      <header className="relative isolate z-10 bg-white">
-        <div className="grid px-[30px] pt-[10px] grid-cols-2">
+    <div className={` z-10 bg-white border-b-2 border-black transition duration-300 ${scrollPosition > 20 ? 'fixed top-0 left-0 right-0' : ''}`}>
+   
+      <TopHeader scrollPosition={scrollPosition} />
+      
+      <header className="relative isolate z-10 bg-white" >
+        <div className={`grid px-[30px] pt-[10px] grid-cols-2 transition duration-300 ${scrollPosition > 10 ? 'absolute w-full' : ''}`}>
           <div className="divide-x flex items-center  gap-2">
             <div className="flex">
               <Link href="#" className="text-[11px] ">
@@ -100,7 +117,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+        <div className={`"mx-auto flex max-w-7xl items-center justify-between p-6 ${scrollPosition > 10 ? ' lg:py-4' : '  '}`}>
           <div className=" flex items-center mx-auto  gap-8">
             <Link href="#" className="font-helvetica font-noraml opacity-50">
               MEN
@@ -120,7 +137,7 @@ const Header = () => {
         </div>
         <div className="relative">
           <nav
-            className="mx-auto  flex max-w-7xl items-center justify-between p-6 pb-2 lg:px-8"
+            className={`mx-auto  flex max-w-7xl items-center justify-between p-6 pb-2 lg:px-8 ${scrollPosition > 10 ? ' lg:pt-2' : '  '}`}
             aria-label="Global"
           >
             <div className="flex lg:hidden">
@@ -154,7 +171,7 @@ const Header = () => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 -translate-y-1"
                 >
-                  <Popover.Panel className="absolute inset-x-0 top-[57px] -z-10 bg-white shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className={`absolute inset-x-0  -z-10 bg-white shadow-lg ring-1 ring-gray-900/5 ${scrollPosition > 10 ? 'top-[41px]' : ' top-[57px] '}`}>
                     <div className="mx-auto grid divide-x max-w-5xl grid-cols-5 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
                     
                       <div class="flex flex-col col-span-2 gap-1 font-[300] text-[11px] font-helvetica px-4">
@@ -309,11 +326,11 @@ const Header = () => {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
+                {/* <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                   alt=""
-                />
+                /> */}
               </a>
               <button
                 type="button"
@@ -387,6 +404,8 @@ const Header = () => {
           </Dialog.Panel>
         </Dialog>
       </header>
+      
+
     </div>
   );
 };

@@ -1,6 +1,9 @@
-import Layout from '@/components/TopHeader/Layout'
+import Layout from '@/components/Layout'
 import '@/styles/globals.css'
 import 'react-slideshow-image/dist/styles.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export default function App({ Component, pageProps }) {
   return(
 

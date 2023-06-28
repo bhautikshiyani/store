@@ -41,4 +41,12 @@
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: 'Blair ITC';
+  src: url('../../public/assets/fonts/BlairITC-Medium.woff2') format('woff2'),
+      url('../../public/assets/fonts/BlairITC-Medium.woff') format('woff'),
+      url('../../public/assets/fonts/BlairITC-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

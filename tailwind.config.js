@@ -19,6 +19,7 @@ module.exports = {
     fontFamily: {
       'helvetica': 'Helvetica Neue',
       'chronicle': 'Chronicle Display',
+      'blair':'Blair ITC',
 
      
     }

@@ -59,7 +59,7 @@ function classNames(...classes) {
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <div className="border-b-2 ">
+    <div className="border-b-2 border-black ">
       <TopHeader />
       <header className="relative isolate z-10 bg-white">
         <div className="grid px-[30px] pt-[10px] grid-cols-2">
@@ -120,7 +120,7 @@ const Header = () => {
         </div>
         <div className="relative">
           <nav
-            className="mx-auto  flex max-w-7xl items-center justify-between p-6 lg:px-8"
+            className="mx-auto  flex max-w-7xl items-center justify-between p-6 pb-2 lg:px-8"
             aria-label="Global"
           >
             <div className="flex lg:hidden">
@@ -135,8 +135,10 @@ const Header = () => {
             </div>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover>
-                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                  SALE
+                <Popover.Button className="flex items-center relative after:absolute group after:w-0 ease-in after:hover:w-full transition duration-150 after:containt  after:h-[4px] outline-none focus:outline-none after:bg-black after:-bottom-2  gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                  <span className="text-red-500">
+                    SALE
+                  </span>
                   <ChevronDownIcon
                     className="h-5 w-5 flex-none text-gray-400"
                     aria-hidden="true"
@@ -152,10 +154,10 @@ const Header = () => {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 -translate-y-1"
                 >
-                  <Popover.Panel className="absolute inset-x-0 top-[70px] -z-10 bg-white  shadow-lg ring-1 ring-gray-900/5">
-                    <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
+                  <Popover.Panel className="absolute inset-x-0 top-[57px] -z-10 bg-white shadow-lg ring-1 ring-gray-900/5">
+                    <div className="mx-auto grid divide-x max-w-5xl grid-cols-5 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
                     
-                      <div class="flex flex-col gap-1 font-[300] text-[11px] font-helvetica">
+                      <div class="flex flex-col col-span-2 gap-1 font-[300] text-[11px] font-helvetica px-4">
                         <p class="underline mb-2">SALE</p>
                         <div className="flex gap-10">
                           <div className="flex flex-col">
@@ -204,7 +206,7 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flex-col gap-1 font-[300] text-[11px] font-helvetica">
+                      <div className="flex flex-col gap-1 font-[300] text-[11px] font-helvetica px-4">
                         <p class="underline mb-2">Clothing size</p>{" "}
                         <a href="womens/sale/clothing" class="main-link">
                           SHOP ALL
@@ -230,7 +232,7 @@ const Header = () => {
                           3XL
                         </a>{" "}
                       </div>
-                      <div className="flex flex-col gap-1 font-[300] text-[11px] font-helvetica">
+                      <div className="flex flex-col gap-1 font-[300] text-[11px] font-helvetica  px-4">
                         
                           {" "}
                           <p class="underline mb-2">Shoe Size</p>{" "}
@@ -265,6 +267,10 @@ const Header = () => {
                             EU 42
                           </a>{" "}
                        
+                      </div>
+                      <div>
+                      <Image width={279} height={397} src="/assets/images/sale60.jpg" className="w-[279px] " />
+
                       </div>
                     </div>
                   </Popover.Panel>

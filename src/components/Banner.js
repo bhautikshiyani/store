@@ -16,7 +16,7 @@ const Banner = () => {
       <div></div>
       <div className="z-2 relative py-12 text-center font-blair ">
         <h2 className="text-[21px]">
-          Up to <span class="text-[42px]">60%</span> Off
+          Up to <span className="text-[42px]">60%</span> Off
         </h2>
         <h3 className="text-[24px]">2,000＋ further reductions</h3>
         <div className="justify-center flex mt-4 items-center">

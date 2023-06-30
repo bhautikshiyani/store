@@ -24,7 +24,7 @@ const Slider = () => {
             <Link key={index} href={"#"}>
 
           <div  className="each-slide-effect">
-            <Image width={1980} height={400} src={items.img} />
+            <Image   priority={true}  alt="Offer Slider" width={1980} height={400}  src={items.img} />
           </div>
             </Link>
         );

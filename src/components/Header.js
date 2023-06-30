@@ -121,12 +121,15 @@ const Header = () => {
                   src="/assets/icons/Wiestell Logo.png"
                   width={150}
                   height={25}
-                  className=""
+                  className="max-w-[150px] w-auto h-auto"
+                  alt="placeholder"
+                 
                 />
               </Link>
             </div>
             <div className="flex-1 hidden md:block max-w-xl rounded-full overflow-hidden relative">
               <input
+              type="text"
                 placeholder="I am shopping for..."
                 className="border text-[14px] py-2 rounded-full w-full outline-none pl-5 pr-10 "
               />
@@ -199,6 +202,7 @@ const Header = () => {
               <Nevbar scrollPosition={scrollPosition} />
               <div className="flex-1  md:hidden block max-w-xl rounded-full overflow-hidden relative">
                 <input
+                type="text"
                   placeholder="I am shopping for..."
                   className="border text-[14px] py-2 rounded-full w-full outline-none pl-5 pr-10 "
                 />

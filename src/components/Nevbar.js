@@ -757,6 +757,7 @@ const Nevbar = ({ scrollPosition }) => {
                 </div> */}
                 <div>
                   <Image
+                     alt="placeholder"
                     width={279}
                     height={397}
                     src={item.img}

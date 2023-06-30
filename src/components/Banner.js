@@ -3,18 +3,27 @@ import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 const Banner = () => {
   return (
-    <div className="relative grid grid-cols-2">
+    <div className="relative h-[270px] md:h-auto  grid md:grid-cols-2">
       <video
         muted
         loop
         autoPlay
         src="/assets/videos/offer.mp4"
-        className="absolute"
+        className="absolute object-cover h-full w-full inset-0 hidden md:block"
       >
         <source src="/assets/videos/offer.mp4" type="video/mp4" />
       </video>
+      <video
+        muted
+        loop
+        autoPlay
+        src="/assets/videos/offer-mobile.mp4"
+        className="absolute block h-[270px] object-cover md:hidden"
+      >
+        <source src="/assets/videos/offer-mobile.mp4" type="video/mp4" />
+      </video>
       <div></div>
-      <div className="z-2 relative py-12 text-center font-blair ">
+      <div className="z-2 mt-20 md:mt-0 relative md:py-[39px] text-center font-blair ">
         <h2 className="text-[21px]">
           Up to <span className="text-[42px]">60%</span> Off
         </h2>

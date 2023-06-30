@@ -1,18 +1,16 @@
-import Image from 'next/image';
-import React, { useEffect } from 'react';
-import dynamic from 'next/dynamic';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Image from "next/image";
+import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-import $ from 'jquery';
-const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
+import $ from "jquery";
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
-
-const ProductSlider = () => {
+const LatestBrands = () => {
   const responsive = {
     0: {
       items: 1,
-
     },
     430: {
       items: 2,
@@ -32,8 +30,8 @@ const ProductSlider = () => {
   };
 
   useEffect(() => {
-    import('owl.carousel').then(() => {
-      const owl = $('.owl-carousel2');
+    import("owl.carousel").then(() => {
+      const owl = $(".owl-carousel2");
       owl.owlCarousel({
         loop: true,
         margin: 5,
@@ -44,24 +42,23 @@ const ProductSlider = () => {
 
       // Custom Nav
 
-      $('.owl-carousel2__next').click(() => owl.trigger('next.owl.carousel'));
+      $(".owl-carousel2__next").click(() => owl.trigger("next.owl.carousel"));
 
-      $('.owl-carousel2__prev').click(() => owl.trigger('prev.owl.carousel'));
+      $(".owl-carousel2__prev").click(() => owl.trigger("prev.owl.carousel"));
     });
   }, []);
-
   return (
-    <div className='container mx-auto px-4 sm:px-0'>
-      <div className="border-b flex items-center justify-between pb-3   ">
+    <div className="container mx-auto px-4 sm:px-0">
+      <div className="border-b flex items-center justify-between pb-3">
         <h3 className="font-semibold text-gray-700 text-[20px]">
-         Products
+          Latest Brands
         </h3>
       </div>
       <div className="px-5 py-4 relative">
         <OwlCarousel
           className="owl-theme owl-carousel2"
           loop
-          dots= {false}
+          dots={false}
           margin={15}
           responsive={responsive}
         >
@@ -72,7 +69,9 @@ const ProductSlider = () => {
               src="/assets/images/large (1).webp"
               alt="placeholder"
             />
-            <h3 className="font-chronicle font-bold mt-2 text-center">Zimmermann</h3>
+            <h3 className="font-chronicle font-bold mt-2 text-center">
+              Zimmermann
+            </h3>
           </div>
           <div className="bg-white shadow-lg p-4 pb-2">
             <Image
@@ -81,7 +80,9 @@ const ProductSlider = () => {
               src="/assets/images/large (1).webp"
               alt="placeholder"
             />
-            <h3 className="font-chronicle font-bold mt-2 text-center">Zimmermann</h3>
+            <h3 className="font-chronicle font-bold mt-2 text-center">
+              Zimmermann
+            </h3>
           </div>
         </OwlCarousel>
         <div className="owl-carousel2__nav w-full flex items-center gap-3">
@@ -97,4 +98,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;
+export default LatestBrands;

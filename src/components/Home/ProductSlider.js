@@ -26,9 +26,7 @@ const ProductSlider = () => {
     1000: {
       items: 5,
     },
-    1200: {
-      items: 6,
-    },
+   
   };
 
   useEffect(() => {

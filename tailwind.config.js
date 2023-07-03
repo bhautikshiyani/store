@@ -20,7 +20,7 @@ module.exports = {
       'helvetica': 'Helvetica Neue',
       'chronicle': 'Chronicle Display',
       'blair':'Blair ITC',
-
+      'sans': ['Public Sans', 'sans-serif'],
      
     }
   },

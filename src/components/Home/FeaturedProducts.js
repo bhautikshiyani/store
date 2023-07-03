@@ -93,9 +93,7 @@ const FeaturedProducts = () => {
     1000: {
       items: 5,
     },
-    1200: {
-      items: 6,
-    },
+   
   };
 
   useEffect(() => {
@@ -113,7 +111,6 @@ const FeaturedProducts = () => {
           Featured Products
         </h3>
       </div>
-
       <div className="px-5 relative">
         <OwlCarousel
           className="owl-theme"

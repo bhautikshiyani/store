@@ -116,7 +116,7 @@ const Header = () => {
             }`}
           >
             <div className=" flex items-center  gap-8">
-              <Link href="#" className="">
+              <Link href="/" className="">
                 <Image
                   src="/assets/icons/Wiestell Logo.png"
                   width={150}
@@ -166,13 +166,13 @@ const Header = () => {
                 </div>
                 <div className="flex divide-x items-center ">
                   <Link
-                    href="#"
+                    href="/login"
                     className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
                   >
                     Login
                   </Link>
                   <Link
-                    href="#"
+                    href="/registration"
                     className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
                   >
                     Registration
@@ -217,13 +217,13 @@ const Header = () => {
                   </div>
                   <div className="flex divide-x items-center ">
                     <Link
-                      href="#"
+                      href="/login"
                       className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
                     >
                       Login
                     </Link>
                     <Link
-                      href="#"
+                      href="/registration"
                       className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
                     >
                       Registration

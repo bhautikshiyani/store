@@ -167,12 +167,12 @@ const Registration = () => {
           </div>
 
           <p className="mt-10 text-center text-sm text-gray-500">
-            Dont have an account?{" "}
+          Already have an account?{" "}
             <Link
               href="/registration"
               className="text-violet-600 font-semibold ml-2 text-[13px]  relative after:absolute after:content-[' '] hover:after:scale-x-100 hover:after:origin-left after:bg-violet-600 after:bottom-[-5px] after:h-[1px] after:rounded-[2px]  after:left-0 after:right-0 after:origin-right border-animation-time after:scale-x-0"
             >
-              Register Now
+              Log In
             </Link>
           </p>
         </div>

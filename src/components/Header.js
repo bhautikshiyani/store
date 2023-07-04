@@ -120,8 +120,9 @@ const Header = () => {
                 <Image
                   src="/assets/icons/Wiestell Logo.png"
                   width={150}
+                  style={{width:'auto' , height:'auto'}}
                   height={25}
-                  className="max-w-[150px] w-auto h-auto"
+                  className="max-w-[150px]"
                   alt="placeholder"
                  
                 />

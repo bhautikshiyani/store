@@ -143,7 +143,7 @@ const Login = () => {
       </div>
 
       <div className="hidden md:block">
-        <Image width={500} height={500} src="/assets/images/just-look-there-there-is-exactly-what-we-were-looking.jpg" />
+        <Image width={500} height={500} alt="looking" src="/assets/images/just-look-there-there-is-exactly-what-we-were-looking.jpg" />
       </div>
     </div>
   );

@@ -34,6 +34,7 @@ export default function Home() {
               <Image
                 src="/assets/images/home_beaute.jpg"
                 className="w-full"
+                alt="home_benaute"
                 width={500}
                 height={500}
               />

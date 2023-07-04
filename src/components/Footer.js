@@ -174,10 +174,10 @@ const Footer = () => {
               </h2>
               <div className="flex gap-2">
                 <Link href="#">
-                  <Image width={200} height={40} src="/assets/icons/play.png" />
+                  <Image width={200} alt="playstore" height={40} src="/assets/icons/play.png" />
                 </Link>
                 <Link href="#">
-                  <Image width={200} height={40} src="/assets/icons/app.png" />
+                  <Image width={200} alt="appstore" height={40} src="/assets/icons/app.png" />
                 </Link>
               </div>
             </div>
@@ -192,7 +192,7 @@ const Footer = () => {
           <div>
             <ul className="flex justify-end gap-2 items-center">
               <li>
-                <Image width={150} height={12} src="/assets/icons/card.png" />
+                <Image width={150} alt="card" height={12} src="/assets/icons/card.png" />
               </li>
             </ul>
           </div>

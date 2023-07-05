@@ -11,6 +11,10 @@ import Image from "next/image";
 import { FaRegHeart } from "react-icons/fa";
 import { MdAdd, MdOutlineShoppingBag, MdRemove } from "react-icons/md";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import Link from "next/link";
+import TopSellingProducts from "@/components/TopSellingProducts/TopSellingProducts";
+import ReviewsAndRatings from "@/components/ProductReviewsAndRatings/ReviewsAndRatings";
+import RatingStar from "@/components/RatingStar";
 const product = {
   name: "Calvin Klein Women's Scuba Sleeveless Princess Seamed Sheath Dress",
   price: "$35",
@@ -115,21 +119,18 @@ const ProductDetail = () => {
 
   return (
     <div className="bg-white">
-      <div className="pb-16 pt-6 sm:pb-24">
-        <nav
-          aria-label="Breadcrumb"
-          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-        >
+      <div className="pb-16 pt-6 container mx-auto xl:max-w-7xl sm:pb-24">
+        {/* <nav aria-label="Breadcrumb" className=" px-4 sm:px-6 lg:px-8">
           <ol role="list" className="flex items-center space-x-4">
             {product.breadcrumbs.map((breadcrumb) => (
               <li key={breadcrumb.id}>
                 <div className="flex items-center">
-                  <a
+                  <Link
                     href={breadcrumb.href}
                     className="mr-4 text-sm font-medium text-gray-900"
                   >
                     {breadcrumb.name}
-                  </a>
+                  </Link>
                   <svg
                     viewBox="0 0 6 20"
                     aria-hidden="true"
@@ -144,24 +145,25 @@ const ProductDetail = () => {
               </li>
             ))}
             <li className="text-sm">
-              <a
+              <Link
                 href={product.href}
                 aria-current="page"
                 className="font-medium text-gray-500 hover:text-gray-600"
               >
                 {product.name}
-              </a>
+              </Link>
             </li>
           </ol>
-        </nav>
-        <div className="mx-auto mt-8 max-w-2xl px-4 sm:px-6 md:max-w-7xl md:px-8">
+        </nav> */}
+
+        <div className=" mt-8 px-4 sm:px-6  md:px-8">
           <div className="md:grid md:grid-cols-2 md:gap-x-8">
             <div className="mt-8 md:mt-0">
               <div className=" max-w-[500px] mx-auto">
                 <ProductDetailSlider img={product.images} />
               </div>
             </div>
-            <div>
+            <div className="mt-5 md:mt-0">
               <div className="md:col-span-5 md:col-start-8">
                 <div className="flex justify-between">
                   <h1 className="text-[16px] font-semibold text-gray-900">
@@ -171,21 +173,7 @@ const ProductDetail = () => {
                 <div className="mt-4">
                   <h2 className="sr-only">Reviews</h2>
                   <div className="flex items-center">
-                    <div className=" flex gap-1 items-center">
-                      {[0, 1, 2, 3, 4].map((rating) => (
-                        <StarIcon
-                          key={rating}
-                          className={classNames(
-                            product.rating > rating
-                              ? "text-[#ffa707]"
-                              : "text-gray-200",
-                            "h-4 w-4 flex-shrink-0"
-                          )}
-                          aria-hidden="true"
-                        />
-                      ))}
-                    </div>
-
+                    <RatingStar ratingNum={product.rating} />
                     <div className="ml-4 flex">
                       <span className="text-xs font-medium text-gray-400 font-sans">
                         ( {product.reviewCount} reviews)
@@ -268,12 +256,12 @@ const ProductDetail = () => {
                       <h2 className=" font-medium text-[13px] text-gray-400">
                         Size
                       </h2>
-                      <a
+                      <Link
                         href="#"
                         className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
                       >
                         See sizing chart
-                      </a>
+                      </Link>
                     </div>
                     <RadioGroup
                       value={selectedSize}
@@ -317,13 +305,19 @@ const ProductDetail = () => {
                       Quantity
                     </span>
                     <div className="flex items-center">
-                      <button className="w-8 h-8 hover:bg-[#e2e6ea] transition duration-300 flex items-center justify-center text-gray-800 bg-[#f5f5f5] ">
+                      <button
+                        type="button"
+                        className="w-8 h-8 hover:bg-[#e2e6ea] transition duration-300 flex items-center justify-center text-gray-800 bg-[#f5f5f5] "
+                      >
                         <MdRemove />
                       </button>
                       <span className="text-gray-800 w-[45px] block text-center">
                         1
                       </span>
-                      <button className="w-8 h-8 hover:bg-[#e2e6ea] transition duration-300 flex items-center justify-center text-gray-800 bg-[#f5f5f5] ">
+                      <button
+                        type="button"
+                        className="w-8 h-8 hover:bg-[#e2e6ea] transition duration-300 flex items-center justify-center text-gray-800 bg-[#f5f5f5] "
+                      >
                         <MdAdd />
                       </button>
                     </div>
@@ -337,20 +331,33 @@ const ProductDetail = () => {
                     </h2>
                   </div>
                   <div className="mt-8 flex gap-2">
+                    <button
+                      type="submit"
+                      className=" flex items-center w-[130px] justify-center  border border-transparent bg-indigo-600 px-6 py-2 text-[13px] font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-0"
+                    >
+                      <MdOutlineShoppingBag className="mr-1" /> Add to cart
+                    </button>
+                    <button
+                      type="submit"
+                      className=" flex items-center w-[130px] justify-center  border border-transparent bg-indigo-600 px-6 py-2 text-[13px] font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-0"
+                    >
+                      <AiOutlineShoppingCart className="mr-1" />
+                      Buy Now
+                    </button>
+                  </div>
 
-                  <button
-                    type="submit"
-                    className=" flex items-center w-[130px] justify-center  border border-transparent bg-indigo-600 px-6 py-2 text-[13px] font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-0"
-                  >
-                  <MdOutlineShoppingBag className="mr-1"/>  Add to cart
-                  </button>
-                  <button
-                    type="submit"
-                    className=" flex items-center w-[130px] justify-center  border border-transparent bg-indigo-600 px-6 py-2 text-[13px] font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-0"
-                  >
-                   <AiOutlineShoppingCart className="mr-1"/>
-                     Buy Now
-                  </button>
+                  <div className="flex mt-4 items-center">
+                    <span className="mr-[14px] text-[13px] text-gray-400">
+                      Refund
+                    </span>
+                    <Image
+                      width={200}
+                      height={30}
+                      src="/assets/icons/refund1.png"
+                    />
+                    <Link href="#" className="text-[13px] text-violet-700 ml-3">
+                      View Policy
+                    </Link>
                   </div>
                 </form>
                 {/* Product details */}
@@ -359,7 +366,7 @@ const ProductDetail = () => {
                     Description
                   </h2>
                   <div
-                    className="prose prose-sm mt-4 text-gray-500"
+                    className="prose prose-sm text-[14px] mt-4 text-gray-500"
                     dangerouslySetInnerHTML={{ __html: product.description }}
                   />
                 </div>
@@ -368,42 +375,23 @@ const ProductDetail = () => {
                     Fabric &amp; Care
                   </h2>
                   <div className="prose prose-sm mt-4 text-gray-500">
-                    <ul role="list">
+                    <ul role="list " className="list-disc pl-4">
                       {product.details.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item} className="text-[14px]">{item}</li>
                       ))}
                     </ul>
                   </div>
                 </div>
-                {/* Policies */}
-                <section aria-labelledby="policies-heading" className="mt-10">
-                  <h2 id="policies-heading" className="sr-only">
-                    Our Policies
-                  </h2>
-                  <dl className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                    {policies.map((policy) => (
-                      <div
-                        key={policy.name}
-                        className="rounded-lg border border-gray-200 bg-gray-50 p-6 text-center"
-                      >
-                        <dt>
-                          <policy.icon
-                            className="mx-auto h-6 w-6 flex-shrink-0 text-gray-400"
-                            aria-hidden="true"
-                          />
-                          <span className="mt-4 text-sm font-medium text-gray-900">
-                            {policy.name}
-                          </span>
-                        </dt>
-                        <dd className="mt-1 text-sm text-gray-500">
-                          {policy.description}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </section>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="grid gap-8  mt-8 px-4 sm:px-6  md:px-8  lg:grid-cols-12 ">
+          <div className="lg:col-span-3 order-2 lg:order-1">
+            <TopSellingProducts />
+          </div>
+          <div className="lg:col-span-9 order-1 lg:order-2">
+            <ReviewsAndRatings />
           </div>
         </div>
       </div>

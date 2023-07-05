@@ -40,7 +40,7 @@ function handleJQuery() {
 
 const sliderData = [
   {
-    img: "/assets/images/placeholder.jpg",
+    img: "/assets/images/top-1.jpg",
     title: "Fossil Men's Grant Stainless Steel Quartz Chronograph Watch",
     price: "92.00",
     oldPrice: "107.00",
@@ -128,14 +128,14 @@ const FeaturedProducts = () => {
               >
                 <div className="py-4 overflow-hidden relative z-[1] group/item">
                   <Link
-                    href="#"
+                    href="/productdetail"
                     className="relative transition-all block after:absolute before:absolute overflow-hidden"
                   >
                     <Image
                       width={195}
                       height={195}
                       alt="placeholder"
-                      className="group-hover/item:scale-105 transition-all"
+                      className="group-hover/item:scale-105 h-[195px] w-[195px] object-contain transition-all"
                       src={item.img}
                     />
                     {item.discount && item.discount ? (
@@ -158,7 +158,7 @@ const FeaturedProducts = () => {
                       </button>
                     </div>
 
-                    <button className="absolute ease-in-out group overflow-hidden h-[35px] transition duration-[0.3s] hover:opacity-100 group-hover/item:translate-y-0 translate-y-[101%] text-center bottom-0 w-full bg-black opacity-70">
+                    <button className="absolute ease-in-out group overflow-hidden h-[35px] transition duration-[0.3s] hover:opacity-100 group-hover/item:translate-y-0 translate-y-[103%] text-center bottom-0 w-full bg-black opacity-70">
                       <span className="text-white ease-in-out ransition duration-[0.4s] group-hover:mt-[-35px] h-[35px] flex items-center justify-center font-semibold text-xs">
                         Add To cart
                       </span>
@@ -170,7 +170,7 @@ const FeaturedProducts = () => {
                   </Link>
                   <div className="p-4 pb-2">
                     <Link
-                      href="#"
+                      href="/productdetail"
                       className="text hover:text-violet-600 transition-all duration-300 text-gray-700 text-[12px] text-center"
                     >
                       {item.title}

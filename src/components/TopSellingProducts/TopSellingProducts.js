@@ -47,7 +47,7 @@ const TopSellingProducts = () => {
               >
                 <div className="px-2.5 col-span-5 lg:col-span-4">
                   <Image
-                    className="lg:h-[80px] object-contain w-[100%] max-h-[100%] xs:h-[80px] sm:h-[150px] h-[150px]"
+                    className="lg:h-[80px] object-contain w-[100%] max-h-[100%] xs:h-[80px] sm:h-[150px ] h-[150px]"
                     src={item.img}
                     width={150}
                     height={150}

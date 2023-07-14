@@ -258,7 +258,7 @@ const ProductDetail = () => {
                       </h2>
                       <Link
                         href="#"
-                        className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                        className="text-sm font-medium text-black hover:text-black"
                       >
                         See sizing chart
                       </Link>
@@ -282,10 +282,10 @@ const ProductDetail = () => {
                                   ? "cursor-pointer focus:outline-none"
                                   : "cursor-not-allowed opacity-25",
                                 active
-                                  ? "ring-2 ring-indigo-500 ring-offset-2"
+                                  ? "ring-2 ring-black ring-offset-2"
                                   : "",
                                 checked
-                                  ? "border-transparent bg-indigo-600 text-white hover:bg-indigo-700"
+                                  ? "border-transparent bg-black text-white hover:bg-black"
                                   : "border-gray-200 bg-white text-gray-900 hover:bg-gray-50",
                                 "flex items-center justify-center rounded-md border py-3 px-3 text-xs font-medium uppercase sm:flex-1"
                               )
@@ -326,20 +326,20 @@ const ProductDetail = () => {
                     <span className="mr-[14px] text-[13px] text-gray-400">
                       Total Price
                     </span>
-                    <h2 className="text-[20px] font-semibold text-violet-600">
+                    <h2 className="text-[20px] font-semibold text-black">
                       {product.price}
                     </h2>
                   </div>
                   <div className="mt-8 flex gap-2">
                     <button
                       type="submit"
-                      className=" flex items-center w-[130px] justify-center  border border-transparent bg-indigo-600 px-6 py-2 text-[13px] font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-0"
+                      className=" flex items-center w-[130px] justify-center  border border-transparent bg-black px-6 py-2 text-[13px] font-medium text-white hover:bg-black focus:outline-none focus:ring-0"
                     >
                       <MdOutlineShoppingBag className="mr-1" /> Add to cart
                     </button>
                     <button
                       type="submit"
-                      className=" flex items-center w-[130px] justify-center  border border-transparent bg-indigo-600 px-6 py-2 text-[13px] font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-0"
+                      className=" flex items-center w-[130px] justify-center  border border-transparent bg-black px-6 py-2 text-[13px] font-medium text-white hover:bg-black focus:outline-none focus:ring-0"
                     >
                       <AiOutlineShoppingCart className="mr-1" />
                       Buy Now
@@ -355,7 +355,7 @@ const ProductDetail = () => {
                       height={30}
                       src="/assets/icons/refund1.png"
                     />
-                    <Link href="#" className="text-[13px] text-violet-700 ml-3">
+                    <Link href="#" className="text-[13px] text-black ml-3">
                       View Policy
                     </Link>
                   </div>

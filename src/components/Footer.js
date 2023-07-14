@@ -93,7 +93,7 @@ const nav = [
 const Footer = () => {
   return (
     <div>
-      <div className="grid xl:max-w-7xl container px-4 mx-auto py-7 md:grid-cols-2">
+      <div className="sm:grid xl:max-w-7xl container px-4 mx-auto py-7 sm:grid-cols-2">
         <div className="flex">
           <input
             placeholder="Sign up to our emails"
@@ -103,8 +103,8 @@ const Footer = () => {
             SIGN UP
           </button>
         </div>
-        <div className="flex items-center justify-end">
-          <ul className="flex item gap-2">
+        <div className="flex mt-4 sm:mt-0  w-full items-center sm:justify-end">
+          <ul className="flex w-full justify-evenly sm:justify-end   item gap-2">
             <li>
               <Link
                 href="#"
@@ -267,6 +267,7 @@ const Footer = () => {
             </h2>
             <span className="text-[14px]  text-gray-600 "> United Kingdom</span>
           </div>
+          
          
             <div className="flex mt-2 sm:mt-0 gap-1">
               <h2 className="font-semibold text-[14px]  text-gray-800 ">
@@ -284,7 +285,7 @@ const Footer = () => {
       <div className="bg-gray-200  ">
         <div className="xl:max-w-7xl py-5 px-4 border-t border-gray-300 flex justify-between items-center container mx-auto">
           <span className="text-black text-[14px] font-sans">
-            © Wiestell 2021
+          COPYRIGHT © 2023, Wiestell Ltd.
           </span>
           <div>
             <ul className="flex justify-end gap-2 items-center">

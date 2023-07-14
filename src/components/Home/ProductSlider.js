@@ -83,10 +83,10 @@ const ProductSlider = () => {
           </div>
         </OwlCarousel>
         <div className="owl-carousel2__nav w-full flex items-center gap-3">
-          <div className="owl-carousel2__prev dark:bg-[#0c1a32] bg-white z-[3] absolute left-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-violet-600 hover:text-white transition duration-200 text-orange">
+          <div className="owl-carousel2__prev white:bg-[#0c1a32] bg-white z-[3] absolute left-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-black hover:text-white transition duration-200 text-orange">
             <FaArrowLeft />
           </div>
-          <div className="owl-carousel2__next dark:bg-[#0c1a32] bg-white z-[3] absolute right-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-violet-600 hover:text-white transition duration-200 text-orange">
+          <div className="owl-carousel2__next white:bg-[#0c1a32] bg-white z-[3] absolute right-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-black hover:text-white transition duration-200 text-orange">
             <FaArrowRight />
           </div>
         </div>

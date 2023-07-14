@@ -54,11 +54,11 @@ const TopSellingProducts = () => {
                   />
                 </div>
                 <div className=" col-span-7 lg:col-span-8">
-                  <h3 className="text hover:text-violet-600 transition duration-300 leading-[16px] text-[13px] text-gray-700 mb-3 mt-2">
+                  <h3 className="text hover:text-black transition duration-300 leading-[16px] text-[13px] text-gray-700 mb-3 mt-2">
                     {item.title}
                   </h3>
                   <div className="flex lg:block xl:flex items-center gap-2">
-                    <span className="text-[14px] font-bold text-violet-600">
+                    <span className="text-[14px] font-bold text-black">
                       {item.price}
                     </span>
                     <span className="text-gray-500 block  font-bold line-through text-[14px]">

@@ -26,6 +26,8 @@ import Link from "next/link";
 import Image from "next/image";
 import TopHeader from "./TopHeader/TopHeader";
 import Nevbar from "./Nevbar";
+import { Tooltip } from "react-tooltip";
+import Cart from "./Cart";
 
 const products = [
   {
@@ -69,7 +71,7 @@ function classNames(...classes) {
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  const [openCart, setOpenCart] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -85,7 +87,7 @@ const Header = () => {
   return (
     <>
       <TopHeader />
-
+      <Tooltip id="header-tooltip" className="z-[999] !text-[12px]" />
       <div className=" px-[30px] pt-[10px] flex justify-between transition duration-300 ">
         <div className="divide-x flex items-center  gap-2">
           <div className="flex">
@@ -98,7 +100,7 @@ const Header = () => {
               <option>GBP £</option>
               <option>USD $</option>
               <option>EUR €</option>
-              <option>HKD $</option>
+              <option>INR $</option>
             </select>
           </div>
         </div>
@@ -120,61 +122,76 @@ const Header = () => {
                 <Image
                   src="/assets/icons/Wiestell Logo.png"
                   width={150}
-                  style={{width:'auto' , height:'auto'}}
+                  style={{ width: "auto", height: "auto" }}
                   height={25}
                   className="max-w-[150px]"
                   alt="placeholder"
-                 
                 />
               </Link>
             </div>
             <div className="flex-1 hidden md:block max-w-xl rounded-full overflow-hidden relative">
               <input
-              type="text"
+                type="text"
                 placeholder="I am shopping for..."
-                className="border text-[14px] py-2 rounded-full w-full outline-none pl-5 pr-10 "
+                className="border text-[14px] border-black py-2 rounded-full w-full focus:border-black !outline-none pl-5 pr-10 "
               />
               <span className="w-10 flex items-center justify-center h-full top-0 bottom-0 right-1 absolute">
                 <MagnifyingGlassIcon className="w-5 h-5 text-gray-500" />
               </span>
             </div>
             <div className="flex max-w-[200px] w-full justify-evenly items-center">
-              <div className="relative">
-                <span className="absolute bg-violet-600 text-white text-[8px] flex items-center justify-center w-3 h-3  rounded-full top-[-4px] right-[-4px]">
+              <Link
+                href="/wishlist"
+                className="relative"
+                data-tooltip-id="header-tooltip"
+                data-tooltip-content="Wishlist"
+              >
+                <span className="absolute bg-black text-white text-[8px] flex items-center justify-center w-3 h-3  rounded-full top-[-4px] right-[-4px]">
                   0
                 </span>
 
                 <HeartIcon className="text-[14px] text-gray-500 w-5" />
-              </div>
+              </Link>
               <div className="relative">
-                <span className="absolute bg-violet-600 text-white text-[8px] flex items-center justify-center w-3 h-3  rounded-full top-[-4px] right-[-4px]">
+                <span className="absolute bg-black text-white text-[8px] flex items-center justify-center w-3 h-3  rounded-full top-[-4px] right-[-4px]">
                   0
                 </span>
 
                 <BellIcon className="text-[14px] text-gray-500 w-5" />
               </div>
-              <div className="relative">
+              <div
+                onClick={() => setOpenCart(!openCart)}
+                className="relative cursor-pointer"
+              >
                 <ShoppingBagIcon className="text-[14px] text-gray-500 w-5" />
-                <span className="absolute bg-violet-600 text-white text-[8px] flex items-center justify-center w-3 h-3  rounded-full top-[-4px] right-[-4px]">
+                <span className="absolute bg-black text-white text-[8px] flex items-center justify-center w-3 h-3  rounded-full top-[-4px] right-[-4px]">
                   0
                 </span>
+
+                <div
+                  className={`${
+                    openCart ? "opacity-100 visible" : "opacity-0 invisible"
+                  } absolute w-[320px] trnasition duration-300 top-[31px] shadow-2xl left-[-265px] sm:left-[-250px] md:left-[-140px] z-[9999]`}
+                >
+                  <Cart />
+                </div>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="group flex gap-2 items-center transition-all duration-300">
-                <div className="flex  items-center transition-all duration-300 group-hover:shadow-md border group-hover:border-violet-600 rounded-full w-9 h-9 justify-center">
-                  <BiUser className="text-gray-500 group-hover:text-violet-600 w-[21px] h-[21px]" />
+                <div className="flex  items-center transition-all duration-300 group-hover:shadow-md border group-hover:border-black rounded-full w-9 h-9 justify-center">
+                  <BiUser className="text-gray-500 group-hover:text-black w-[21px] h-[21px]" />
                 </div>
                 <div className="flex divide-x items-center ">
                   <Link
                     href="/login"
-                    className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
+                    className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-black"
                   >
                     Login
                   </Link>
                   <Link
                     href="/registration"
-                    className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
+                    className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-black"
                   >
                     Registration
                   </Link>
@@ -203,34 +220,13 @@ const Header = () => {
               <Nevbar scrollPosition={scrollPosition} />
               <div className="flex-1  md:hidden block max-w-xl rounded-full overflow-hidden relative">
                 <input
-                type="text"
+                  type="text"
                   placeholder="I am shopping for..."
-                  className="border text-[14px] py-2 rounded-full w-full outline-none pl-5 pr-10 "
+                  className="border border-black mt-px focus:border-black !outline-none text-[14px] py-2 rounded-full w-full  pl-5 pr-10 "
                 />
                 <span className="w-10 flex items-center justify-center h-full top-0 bottom-0 right-1 absolute">
                   <MagnifyingGlassIcon className="w-5 h-5 text-gray-500" />
                 </span>
-              </div>
-              <div className="md:hidden block">
-                <div className="group flex gap-2 items-center transition-all duration-300">
-                  <div className="flex  items-center transition-all duration-300 group-hover:shadow-md border group-hover:border-violet-600 rounded-full w-9 h-9 justify-center">
-                    <BiUser className="text-gray-500 group-hover:text-violet-600 w-[21px] h-[21px]" />
-                  </div>
-                  <div className="flex divide-x items-center ">
-                    <Link
-                      href="/login"
-                      className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      href="/registration"
-                      className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-violet-600"
-                    >
-                      Registration
-                    </Link>
-                  </div>
-                </div>
               </div>
             </nav>
           </div>
@@ -244,12 +240,7 @@ const Header = () => {
             <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
-                  {/* <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                /> */}
+            <Image width={40} height={40} src="/assets/icons/1024x1024 Icon.jpg" />
                 </a>
                 <button
                   type="button"
@@ -310,13 +301,26 @@ const Header = () => {
                       Company
                     </a>
                   </div>
-                  <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      Log in
-                    </a>
+                  <div className="md:hidden block py-4">
+                    <div className="group flex gap-2 items-center transition-all duration-300">
+                      <div className="flex  items-center transition-all duration-300 group-hover:shadow-md border group-hover:border-black rounded-full w-9 h-9 justify-center">
+                        <BiUser className="text-gray-500 group-hover:text-black w-[21px] h-[21px]" />
+                      </div>
+                      <div className="flex divide-x items-center ">
+                        <Link
+                          href="/login"
+                          className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-black"
+                        >
+                          Login
+                        </Link>
+                        <Link
+                          href="/registration"
+                          className="text-[12px] px-2 transition-all duration-300 text-gray-400 font-medium hover:text-black"
+                        >
+                          Registration
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

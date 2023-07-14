@@ -124,7 +124,7 @@ const FeaturedProducts = () => {
             return (
               <div
                 key={index}
-                className="border z-[1] hover:before:border-t-violet-400 hover:before:w-full hover:before:h-full after:content-[''] before:content-['']  hover:before:border-e-violet-400 before:border-2 before:w-0 before:h-0 before:border-transparent before:top-0 before:left-0 before:absolute relative after:absolute after:z-[-1] before:z-[-1] border-animation hover:after:border-b-violet-400 hover:after:w-full hover:after:h-full hover:after:border-s-violet-400 after:border-2 after:w-0 after:h-0 after:border-transparent after:inset-0 after:absolute overflow-hidden px-4 transition-all duration-[0.5s]"
+                className="border z-[1] hover:before:border-t-black hover:before:w-full hover:before:h-full after:content-[''] before:content-['']  hover:before:border-e-black before:border-2 before:w-0 before:h-0 before:border-transparent before:top-0 before:left-0 before:absolute relative after:absolute after:z-[-1] before:z-[-1] border-animation hover:after:border-b-black hover:after:w-full hover:after:h-full hover:after:border-s-black after:border-2 after:w-0 after:h-0 after:border-transparent after:inset-0 after:absolute overflow-hidden px-4 transition-all duration-[0.5s]"
               >
                 <div className="py-4 overflow-hidden relative z-[1] group/item">
                   <Link
@@ -151,7 +151,7 @@ const FeaturedProducts = () => {
                         className="bg-white mb-2 shadow-lg border flex items-center justify-center w-8 h-8"
                       >
                         {wishlist ? (
-                          <AiFillHeart className="w-4 text-violet-600" />
+                          <AiFillHeart className="w-4 text-black" />
                         ) : (
                           <AiOutlineHeart className="w-4 text-gray-500" />
                         )}
@@ -171,12 +171,12 @@ const FeaturedProducts = () => {
                   <div className="p-4 pb-2">
                     <Link
                       href="/productdetail"
-                      className="text hover:text-violet-600 transition-all duration-300 text-gray-700 text-[12px] text-center"
+                      className="text hover:text-black transition-all duration-300 text-gray-700 text-[12px] text-center"
                     >
                       {item.title}
                     </Link>
                     <div className="cursor-default text-center mt-3">
-                      <span className="font-bold text-gray-700 group-hover/item:text-violet-600">
+                      <span className="font-bold text-gray-700 group-hover/item:text-black">
                         ${item.price}
                       </span>
                       {item.oldPrice && item.oldPrice ? (
@@ -194,10 +194,10 @@ const FeaturedProducts = () => {
           })}
         </OwlCarousel>
         <div className="owl-carousel__nav w-full flex items-center gap-3 ">
-          <div className="owl-carousel__prev dark:bg-[#0c1a32] bg-white z-[3] absolute left-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-violet-600 hover:text-white transition duration-200 text-orange">
+          <div className="owl-carousel__prev white:bg-[#0c1a32] bg-white z-[3] absolute left-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-black hover:text-white transition duration-200 text-orange">
             <FaArrowLeft />
           </div>
-          <div className="owl-carousel__next dark:bg-[#0c1a32] bg-white z-[3] absolute right-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-violet-600 hover:text-white transition duration-200 text-orange">
+          <div className="owl-carousel__next white:bg-[#0c1a32] bg-white z-[3] absolute right-0 top-[50%] translate-y-[-50%] rounded w-8 h-8 flex items-center justify-center cursor-pointer shadow-sm hover:bg-black hover:text-white transition duration-200 text-orange">
             <FaArrowRight />
           </div>
         </div>

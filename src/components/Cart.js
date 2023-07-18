@@ -57,8 +57,8 @@ const Cart = () => {
                   {item.name}
                 </h4>
                 <div>
-                  <span class="text-[14px] text-gray-500">1x</span>
-                  <span class="text-[14px] text-gray-500 ml-2 font-sans">
+                  <span className="text-[14px] text-gray-500">1x</span>
+                  <span className="text-[14px] text-gray-500 ml-2 font-sans">
                     {item.price}
                   </span>
                 </div>

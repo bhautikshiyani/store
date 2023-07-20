@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <Slider />
       <Banner />
-      <div className="grid  sm:grid-cols-2">
+      <div className="grid mt-5 sm:grid-cols-2">
         <div className="relative group">
           <img
             src="/assets/images/man1.jpg"

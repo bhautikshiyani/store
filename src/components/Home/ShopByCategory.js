@@ -40,13 +40,13 @@ const manCatagory = [
 const ShopByCategory = () => {
   return (
     <div className="">
-      <div className="border-b px-4 sm:px-0 flex items-center justify-between pb-3  mb-8 ">
+      <div className="border-b px-4  flex items-center justify-between pb-3  mb-8 ">
         <h3 className="font-semibold text-gray-700 text-[20px]">
           SHOP BY CATEGORY
         </h3>
       </div>
-      <div className="grid divide-x px-6 md:px-0 sm:grid-cols-2">
-        <div className="md:grid md:grid-cols-2 gap-x-5 md:px-6">
+      <div className="grid divide-x px-0 sm:grid-cols-2">
+        <div className="md:grid md:grid-cols-2 gap-x-5 px-6">
           {manCatagory.map((item, index) => {
             return (
               <div
@@ -79,7 +79,7 @@ const ShopByCategory = () => {
           </div>
         </div>
 
-        <div className="md:grid md:grid-cols-2 gap-x-5 md:px-6">
+        <div className="md:grid md:grid-cols-2 gap-x-5 px-6">
           {manCatagory.map((item, index) => {
             return (
               <div

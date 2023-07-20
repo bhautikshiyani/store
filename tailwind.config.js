@@ -17,6 +17,8 @@ module.exports = {
       },
       colors: {
         'dark': '#292933',
+        'light':'#f5f5f5',
+        'dark800':'#1b1b28',
       },
     },
     fontFamily: {

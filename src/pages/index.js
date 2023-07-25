@@ -8,10 +8,12 @@ import Link from "next/link";
 import LatestBrands from "@/components/Home/LatestBrands";
 import ShopByCategory from "@/components/Home/ShopByCategory";
 import { AiFillCaretRight } from "react-icons/ai";
+import Newsletter from "@/components/Newsletter";
 
 export default function Home() {
   return (
     <div>
+    <Newsletter/>
       <Slider />
       <Banner />
       <div className="grid mt-5 sm:grid-cols-2">

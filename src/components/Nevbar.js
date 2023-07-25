@@ -123,6 +123,7 @@ const nevdata = [
         alllist: [
           {
             name: "SHOP ALL",
+            href:'/product'
           },
           {
             name: "ACCESSORIES",
@@ -712,7 +713,7 @@ const Nevbar = ({ scrollPosition }) => {
                         return (
                           <a
                             key={index}
-                            href="womens/sale/clothing"
+                            href={item?.href}
                             className="main-link"
                           >
                             {item.name}

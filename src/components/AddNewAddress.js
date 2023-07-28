@@ -7,6 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Select from "react-select";
 import { Country, State, City } from "country-state-city";
+console.log("rrewrwer" , State)
 const AddNewAddress = ({open , setOpen}) => {
 
 

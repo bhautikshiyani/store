@@ -94,7 +94,7 @@ const ProductDetailSlider = ({ img }) => {
           {
             img.map((item, index) => {
               return (
-                <Image width={100} height={90} key={index} className='h-[90px] object-cover'  style={{width:'auto' , height:'auto'}} src={item.imageSrc} alt={item.imageAlt} />
+                <Image width={100} height={90} key={index}  className='h-[90px] object-cover'  style={{width:'auto' , height:'auto'}} src={item.imageSrc} alt={item.imageAlt} />
               )
             })
           }

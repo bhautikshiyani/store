@@ -48,6 +48,7 @@ const Newsletter = () => {
                       src="/assets/icons/promotion.png"
                       width={80}
                       height={80}
+                      alt="promotion"
                     />
                   </div>
                   <div className="mt-3 text-center sm:mt-5">

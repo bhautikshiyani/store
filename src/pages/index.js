@@ -50,6 +50,7 @@ export default function Home() {
           <Image
             width={500}
             height={500}
+            alt="black-man"
             className="max-h-[314px] lg:max-h-[500px] h-full w-full object-cover"
             src="/assets/images/black-man.webp"
           />
@@ -67,6 +68,7 @@ export default function Home() {
           <Image
             width={500}
             height={500}
+            alt="black-man"
             className="max-h-[314px] lg:max-h-[500px] h-full w-full object-cover"
             src="/assets/images/black-bag.webp"
           />
@@ -117,6 +119,7 @@ export default function Home() {
           <Image
             width={500}
             height={500}
+            alt="black-Women"
             className="max-h-[314px] lg:max-h-[500px] h-full w-full object-cover"
             src="/assets/images/Best-Beach-Vacation-Clothes-Women.webp"
           />
@@ -134,6 +137,7 @@ export default function Home() {
           <Image
             width={500}
             height={500}
+            alt="promo"
             className="max-h-[314px] lg:max-h-[500px] h-full w-full object-cover"
             src="/assets/images/16b76c55-f0bf-4505-b894-917320707e45-0712-MW-HP-promo-6-small-DESKTOP_result.webp"
           />
@@ -151,6 +155,7 @@ export default function Home() {
           <Image
             width={500}
             height={500}
+            alt="outfit"
             src="/assets/images/summer-outfit-ideas-for-men.png.webp"
             className="max-h-[314px] lg:max-h-[500px] h-full w-full object-cover"
           />

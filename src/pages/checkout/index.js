@@ -2,6 +2,7 @@ import Confirmation from "@/components/Checkout/Confirmation";
 import MyCart from "@/components/Checkout/MyCart";
 import Payment from "@/components/Checkout/Payment";
 import ShippingInfo from "@/components/Checkout/ShippingInfo";
+import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsArrowLeft, BsCheck2Circle, BsTruck } from "react-icons/bs";
@@ -60,8 +61,16 @@ const CheckOut = () => {
           </span>
         </div>
       </div>
-      <div className={`${cartStep === 3 ? "grid lg:grid-cols-12 gap-7" :" "} container mx-auto  mt-7 xl:max-w-6xl`}>
-        <div className={` border ${cartStep === 3 ? "order-2 lg:order-1  lg:col-span-8 " :" "}`}>
+      <div
+        className={`${
+          cartStep === 3 ? "grid lg:grid-cols-12 gap-7" : " "
+        } container mx-auto  mt-7 xl:max-w-6xl`}
+      >
+        <div
+          className={` border ${
+            cartStep === 3 ? "order-2 lg:order-1  lg:col-span-8 " : " "
+          }`}
+        >
           {cartStep === 1 ? (
             <MyCart />
           ) : cartStep === 2 ? (
@@ -72,32 +81,52 @@ const CheckOut = () => {
             <Confirmation />
           )}
           <div className="p-6">
-            <div className="grid sm:grid-cols-2">
-              <div className="hidden sm:flex items-center">
-                <button className="text-gray-500  flex items-center gap-2 hover:text-black transition duration-300">
-                  <BsArrowLeft /> Return to shop
-                </button>
-              </div>
-              <div className="flex gap-3 justify-end">
-                {cartStep !== 1 && (
-                  <button
-                    onClick={handleBackcart}
-                    className="bg-white  px-3 py-2"
-                  >
-                    Back
-                  </button>
-                )}
-                <button
-                  onClick={handlecart}
+            {cartStep === 4 ? (
+              <div className="text-center">
+                <Link
+                  href ="/"
                   className="bg-black text-white px-3 py-2"
                 >
-                  Continue to Shipping
-                </button>
+                  Continue Shopping
+                </Link>
               </div>
-            </div>
+            ) : (
+              <>
+                <div className="grid sm:grid-cols-2">
+                  <div className="hidden sm:flex items-center">
+                    <button className="text-gray-500  flex items-center gap-2 hover:text-black transition duration-300">
+                      <BsArrowLeft /> Return to shop
+                    </button>
+                  </div>
+                  <div className="flex gap-3 justify-end">
+                    {cartStep !== 1 && (
+                      <button
+                        onClick={handleBackcart}
+                        className="bg-white  px-3 py-2"
+                      >
+                        Back
+                      </button>
+                    )}
+
+                    <button
+                      onClick={handlecart}
+                      className="bg-black text-white px-3 py-2"
+                    >
+                      Continue to Shipping
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
-        <div  className={`px-4 border py-4 ${cartStep === 3 ? "order-1 lg:order-2 lg:col-span-4 block" :" hidden"}`}>
+        <div
+          className={`px-4 border py-4 ${
+            cartStep === 3
+              ? "order-1 lg:order-2 lg:col-span-4 block"
+              : " hidden"
+          }`}
+        >
           <div className="flex items-center mb-3">
             <h3 class="text-[16px] flex-1 font-medium font-sans leading-6 text-dark800">
               Summary

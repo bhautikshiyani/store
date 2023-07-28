@@ -51,6 +51,7 @@ const TopSellingProducts = () => {
                     src={item.img}
                     width={150}
                     height={150}
+                    alt={item.img}
                   />
                 </div>
                 <div className=" col-span-7 lg:col-span-8">

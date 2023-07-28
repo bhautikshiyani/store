@@ -8,6 +8,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import ScrollButton from "./ScrollButton";
 const nav = [
   {
     title: "Univers",
@@ -93,6 +94,10 @@ const nav = [
 const Footer = () => {
   return (
     <div>
+    <div className="flex justify-center">
+      <ScrollButton text="Back To Top" className="bg-white py-2 gap-2  items-center justify-center trnasition duration-300 border-black border px-4" />
+        
+    </div>
       <div className="sm:grid xl:max-w-7xl container px-4 mx-auto py-7 sm:grid-cols-2">
         <div className="flex">
           <input

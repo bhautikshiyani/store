@@ -56,12 +56,13 @@ const ReviewsAndRatings = () => {
         <div className=" divide-y ">
           {data.map((item, index) => {
             return (
-              <div className="flex py-5">
+              <div key={index} className="flex py-5">
                 <div className="w-[50px] h-[50px] flex-none mr-3">
                   <Image
                     src={item.avatar}
                     width={50}
                     height={50}
+                    alt={item.avatar}
                     className="rounded-full"
                   />
                 </div>

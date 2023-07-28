@@ -48,6 +48,7 @@ const Cart = () => {
                 <Image
                   src={item.image}
                   width={60}
+                  alt="photo"
                   height={60}
                   className="max-w-[60px] flex-1 w-full max-h-[60px] object-cover"
                 />

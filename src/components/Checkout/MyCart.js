@@ -56,6 +56,7 @@ const MyCart = () => {
                       src={item.img}
                       width={70}
                       height={70}
+                      alt="icon"
                       className="w-[70px] h-[70px] object-cover"
                     />
                   </div>

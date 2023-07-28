@@ -57,6 +57,7 @@ const ShopByCategory = () => {
                   <Image
                     width={300}
                     height={300}
+                    alt="product"
                     className="md:max-w-[300px] object-cover w-full  h-full max-h-[300px]"
                     src={item.img}
                   />
@@ -92,6 +93,7 @@ const ShopByCategory = () => {
                     height={300}
                     className="md:max-w-[300px] object-cover w-full  h-full max-h-[300px]"
                     src={item.img}
+                    alt={item.img}
                   />
                   <span className="pt-2 text-[12px] font-semibold pb-2  flex items-center justify-center text-center leading-[20px]">
                     {item.name}{" "}

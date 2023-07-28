@@ -35,6 +35,7 @@ const Payment = () => {
             </h4>
             <Image
               width={300}
+              alt="paymenticon"
               height={36}
               src="/assets/icons/payment-icons.webp"
             />

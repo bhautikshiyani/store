@@ -352,6 +352,7 @@ const ProductDetail = () => {
                     </span>
                     <Image
                       width={200}
+                      alt="refund1"
                       height={30}
                       src="/assets/icons/refund1.png"
                     />

@@ -240,7 +240,7 @@ const Header = () => {
             <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
-            <Image width={40} height={40} src="/assets/icons/1024x1024 Icon.jpg" />
+            <Image alt="bg" width={40} height={40} src="/assets/icons/1024x1024 Icon.jpg" />
                 </a>
                 <button
                   type="button"
